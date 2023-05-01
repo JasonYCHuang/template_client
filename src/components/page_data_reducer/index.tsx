@@ -7,7 +7,7 @@ import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import { useAppDispatch, useAppSelector } from '../../reducers/hooks';
-import { plusOne, minusOne } from '../../actions/calculatorSlice';
+import { plusNum, minusNum } from '../../actions/calculatorSlice';
 
 const styleRoot = {
   border: '1px solid red',
@@ -18,15 +18,17 @@ const styleScreen = {
   padding: '10px 30px 10px 30px',
 };
 
+const delta = 5;
+
 const CalcByBtnComp = () => {
   const dispatch = useAppDispatch();
   const { result } = useAppSelector((state) => state.calculator);
 
-  const onPlusOne = () => {
-    dispatch(plusOne());
+  const onPlusNum = (num: number) => {
+    dispatch(plusNum(num));
   };
-  const onMinusOne = () => {
-    dispatch(minusOne());
+  const onMinusNum = (num: number) => {
+    dispatch(minusNum(num));
   };
 
   return (
@@ -34,9 +36,9 @@ const CalcByBtnComp = () => {
       <Button
         variant="contained"
         startIcon={<RemoveCircleOutlineIcon />}
-        onClick={onMinusOne}
+        onClick={() => onMinusNum(delta)}
       >
-        -1
+        -
       </Button>
       <Typography variant="h5" style={styleScreen}>
         { result }
@@ -44,9 +46,9 @@ const CalcByBtnComp = () => {
       <Button
         variant="outlined"
         startIcon={<AddCircleOutlineIcon />}
-        onClick={onPlusOne}
+        onClick={() => onPlusNum(delta)}
       >
-        +1
+        +
       </Button>
     </Stack>
   );

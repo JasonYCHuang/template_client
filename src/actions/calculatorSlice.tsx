@@ -11,17 +11,17 @@ export const calculatorSlice = createSlice({
   name: 'calculator',
   initialState,
   reducers: {
-    plusOne: (state) => {
-      state.result += 1;
-      console.log('plus one');
+    plusNum: (state, { payload }) => {
+      state.result += payload;
+      console.log('plus +');
     },
-    minusOne: (state) => {
-      state.result -= 1;
-      console.log('minus one');
+    minusNum: (state, { payload }) => {
+      state.result -= payload;
+      console.log('minus -');
     },
   },
 });
 
-export const { plusOne, minusOne } = calculatorSlice.actions;
+export const { plusNum, minusNum } = calculatorSlice.actions;
 
 export default calculatorSlice.reducer;
