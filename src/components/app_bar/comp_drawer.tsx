@@ -7,6 +7,7 @@ import {
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
+import Battery5BarIcon from '@mui/icons-material/Battery5Bar';
 
 type AnchorTyp = 'left';
 
@@ -51,6 +52,17 @@ const DrawerContentComp = (anchor: AnchorTyp, toggleDrawer: any) => (
           </ListItemIcon>
           <Link to="/style_mui" style={styleLink}>
             風格 - Mui
+          </Link>
+        </ListItemButton>
+      </ListItem>
+      <Divider />
+      <ListItem key="data_reducer" disablePadding>
+        <ListItemButton>
+          <ListItemIcon>
+            <Battery5BarIcon />
+          </ListItemIcon>
+          <Link to="/data_reducer" style={styleLink}>
+            數據流 - Reducer
           </Link>
         </ListItemButton>
       </ListItem>
