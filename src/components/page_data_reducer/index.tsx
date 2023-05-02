@@ -6,15 +6,12 @@ import WeatherSelectComp from './comp_weather_select';
 import WeatherDisplayComp from './comp_weather_display';
 
 const styleRoot = {
-  border: '1px solid red',
 };
 
 const styleCalculator = {
-  border: '2px solid blue',
 };
 
 const styleWeather = {
-  border: '2px solid green',
 };
 
 const PageStyleMui = () => (
