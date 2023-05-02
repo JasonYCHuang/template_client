@@ -56,6 +56,17 @@ const DrawerContentComp = (anchor: AnchorTyp, toggleDrawer: any) => (
         </ListItemButton>
       </ListItem>
       <Divider />
+      <ListItem key="style_mui_adv" disablePadding>
+        <ListItemButton>
+          <ListItemIcon>
+            <MailIcon />
+          </ListItemIcon>
+          <Link to="/style_mui_adv" style={styleLink}>
+            風格 - Mui 進階
+          </Link>
+        </ListItemButton>
+      </ListItem>
+      <Divider />
       <ListItem key="data_reducer" disablePadding>
         <ListItemButton>
           <ListItemIcon>
