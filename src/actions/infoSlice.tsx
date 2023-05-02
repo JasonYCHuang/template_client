@@ -1,6 +1,7 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import { TypInfoState } from '../types/info';
 import { logInApi } from '../apis/user';
+import { getWeatherApi } from '../apis/weather';
 
 const initialState: TypInfoState = {
   isLoading: false,
@@ -37,16 +38,19 @@ export const infoSlice = createSlice({
     });
     builder.addMatcher(isAnyOf(
       logInApi.pending,
+      getWeatherApi.pending,
     ), (state) => {
       state.isLoading = true;
     });
     builder.addMatcher(isAnyOf(
       logInApi.fulfilled,
+      getWeatherApi.fulfilled,
     ), (state) => {
       state.isLoading = false;
     });
     builder.addMatcher(isAnyOf(
       logInApi.rejected,
+      getWeatherApi.rejected,
     ), (state) => {
       state.isLoading = false;
     });
