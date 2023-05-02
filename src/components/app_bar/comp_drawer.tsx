@@ -50,7 +50,18 @@ const DrawerContentComp = (anchor: AnchorTyp, toggleDrawer: any) => (
             <MailIcon />
           </ListItemIcon>
           <Link to="/style_mui" style={styleLink}>
-            風格 - Mui
+            風格 - Mui 基本
+          </Link>
+        </ListItemButton>
+      </ListItem>
+      <Divider />
+      <ListItem key="style_mui_adv" disablePadding>
+        <ListItemButton>
+          <ListItemIcon>
+            <MailIcon />
+          </ListItemIcon>
+          <Link to="/style_mui_adv" style={styleLink}>
+            風格 - Mui 進階
           </Link>
         </ListItemButton>
       </ListItem>
