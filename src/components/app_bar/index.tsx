@@ -11,7 +11,7 @@ const TitleComp = () => (
     component="div"
     sx={{ flexGrow: 1, fontWeight: '600' }}
   >
-    React模板
+    Avary AI平台
   </Typography>
 );
 
